@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="refresh" content="6;url=/test2/html/login.html"/>
+    <title>6秒后自动跳转</title>
+</head>
+<body onload="run()">
+<h1>亲,请耐心等待,<span id="timeRemained">6</span>秒后自动跳转</h1>
+<script type="text/javascript">
+    var time = 6;
+    function run() {
+        var timeRemained = document.getElementById("timeRemained");
+        timeRemained.innerHTML = time;
+        time--;
+        window.setTimeout("run()", 1000);
+    }
+</script>
+</body>
+</html>
